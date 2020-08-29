@@ -1,0 +1,115 @@
+<!doctype html>
+<html ng-app="runSpa" ng-csp lang="{{language}}">
+
+<head>
+    <base href="/" />
+    <meta charset="utf-8">
+    <!--statusCode-->
+    <title ng-bind="pageTitle">Run Disney</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="fragment" content="!">
+    <!--Pinterest Claims-->
+    <meta name="p:domain_verify" content="a5afc556bc303380d92875c35f31a393" />
+    <link rel="canonical" href="https://www.rundisney.com/" />
+
+    <script src="https://secure.cdn1.wdpromedia.com/analytics/framework/run/stable/framework-top.min.js"></script>
+
+    <!-- Place /assets/favicon.bdc716f2.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- build:css run-spa.bowerDependencies.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css run-spa.css -->
+    <!-- injector:css -->
+    <link rel="stylesheet" href="/assets/run-spa.bowerComponents.53158133.css">
+    <link rel="stylesheet" href="/assets/main.b2c53183.css">
+    <!-- endinjector -->
+    <!-- endbuild -->
+
+    <script src="//assets.adobedtm.com/launch-ENe4a7bd4a3d3f4f56a5facfcb18d4bf39.min.js"></script>
+</head>
+
+<body
+    ng-class="($root.sideBarOpen && (screenSize.isMobile || screenSize.isTablet)) || $root.preventScroll ? 'preventScroll' : '' ">
+    <as-meta-tags></as-meta-tags>
+    <!-- [if lt IE 9]>
+<div>
+    <div>
+        <strong>Please Upgrade Your Web Browser</strong>
+    </div>
+    <div>
+        We apologize for the inconvenience, but you are using an older version of your web browser and we are not able to provide you with the best possible experience.
+    </div>
+    <div>
+        <a href="http://windows.microsoft.com/ie" target="_blank">
+            Upgrade Microsoft Internet Explorer
+        </a>
+    </div>
+    <div>
+        <a href="https://www.google.com/chrome/browser" target="_blank">
+            Install Google Chrome
+        </a>
+    </div>
+        <div id="learnMoreLink">
+        <a href="https://www.mozilla.com/firefox" target="_blank">
+            Install Mozilla Firefox
+        </a>
+    </div>
+</div>
+<![endif]-->
+
+    <!-- Add your site or application content here -->
+    <!-- <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Home</a>
+        </div>
+    </div>
+</nav>
+<div ui-view class="container"></div> -->
+    <!-- Trigger download of pepicon font -->
+    <i class="pepicon" aria-hidden="true"
+        style="visibility: hidden; height: 0; width: 0; display: inline !important"></i>
+    <div id="mainBody" class="wrapper" ng-init="$root.sideBarOpen = false" ng-class="{'open': $root.sideBarOpen}">
+        <div>
+            <a role="button" href="#" class="skipToMain sr-only">Skip to main content</a>
+            <section id="page-header">
+                <div ui-view="header"></div>
+            </section>
+            <section id="page-content" tabindex="-1">
+                <div class="transition" ng-class="{'loading': pageLoading}"></div>
+                <div ui-view="content"></div>
+            </section>
+            <section id="site-footer">
+                <div ui-view="footer"></div>
+            </section>
+        </div>
+        <as-legal-banner ng-if="!pageLoading"></as-legal-banner>
+    </div>
+    <!-- build:js run-spa.bowerDependencies.js -->
+    <!-- bower:js -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js /assets/run-spa.4696dbac.js -->
+    <!-- injector:js -->
+    <script src="/assets/run-spa.bowerComponents.min.272101ca.js"></script>
+    <script src="/assets/run-spa.min.6ab8b12c.js"></script>
+    <!-- endinjector -->
+    <!-- endbuild -->
+    <script type="text/javascript" src="/constant"></script>
+
+    <script src="https://secure.cdn2.wdpromedia.com/analytics/framework/run/stable/framework-bottom.min.js"></script>
+    <script type="text/javascript">typeof _satellite !== 'undefined' && _satellite.pageBottom();</script>
+</body>
+
+</html>
